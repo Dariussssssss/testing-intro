@@ -1,9 +1,4 @@
-// function notImplemented() {
-//   throw new Error('Корзина ещё не реализована. Сначала прочитайте тесты.');
-// }
-
 function addToCart(cart, product, quantity = 1) {
-  // return notImplemented();
   if (!Number.isFinite(quantity) || quantity <= 0) {
     throw new RangeError('Количество должно быть положительным числом');
   }
@@ -25,7 +20,6 @@ function addToCart(cart, product, quantity = 1) {
 
 
 function changeQuantity(cart, id, quantity) {
-  // return notImplemented();
   if (!Number.isFinite(quantity) || quantity <= 0) {
     throw new RangeError('Количество должно быть положительным числом');
   }
@@ -43,17 +37,14 @@ function changeQuantity(cart, id, quantity) {
 }
 
 function removeFromCart(cart, id) {
-  // return notImplemented();
   return cart.filter((item) => item.id !== id);
 }
 
 function calculateCartSubtotal(cart) {
-  // return notImplemented();
   return cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 }
 
 function calculateOrderTotal(cart, promoCode) {
-  // return notImplemented();
   const subtotal = calculateCartSubtotal(cart);
 
   let discount = 0;
